@@ -54,6 +54,7 @@ void generate_init_all_func(std::multimap<std::string, std::string> dependences,
               return are_inited[k_v.second];
             })) {
           if (init_funcs.contains(k)) {
+		  std::cout << "//" << k << std::endl;
             std::cout << init_funcs[k] << std::endl;
           }
           are_inited[k] = true;
