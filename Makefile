@@ -7,5 +7,5 @@ lex.yy.c : lexer.l
 parser.tab.c : parser.y
 	bison parser.y
 
-dependence_compiler : attribute_dependence_parser.cpp lex.yy.c parser.tab.c
-	c++ attribute_dependence_parser.cpp lex.yy.c parser.tab.c --std=c++23 -o dependence_compiler
+dependence_compiler : main.cpp lex.yy.c parser.tab.c
+	c++ main.cpp lex.yy.c parser.tab.c --std=c++23 -o dependence_compiler
